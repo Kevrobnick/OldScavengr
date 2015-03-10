@@ -4,11 +4,14 @@ import seniorproject.com.scavengr.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 
 /**
@@ -51,6 +54,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        // attempting to add function to createGameButton
+        ImageButton createGameButton = (ImageButton)findViewById(R.id.createGameButton);
+        createGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent openCreateGameActivity = new Intent(MainActivity.this, CreateGameActivity.class);
+                startActivity(openCreateGameActivity);
+            }
+        });
 
         final View controlsView = findViewById(R.id.fullscreen_content_controls);
         final View contentView = findViewById(R.id.fullscreen_content);
