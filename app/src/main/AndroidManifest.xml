@@ -34,6 +34,12 @@
             android:label="@string/title_activity_main"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name=".CreateGameActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_create_game"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
     </application>
 
 </manifest>
